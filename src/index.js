@@ -59,7 +59,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-<<<<<<< HEAD
 // checklist
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('checkBtn')) {
@@ -86,6 +85,4 @@ clearBtn.addEventListener('click', () => {
   displayTask(store.tasks);
 });
 
-=======
->>>>>>> main
 export default store;

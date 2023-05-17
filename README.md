@@ -7,11 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-<<<<<<< HEAD
-  - [� Getting Started ](#-getting-started-)
-=======
   - [💻 Getting Started ](#-getting-started-)
->>>>>>> main
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
@@ -52,10 +48,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -116,11 +108,7 @@ You can deploy this project using [Netlify](https://www.netlify.com/) or [Github
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-<<<<<<< HEAD
 - **Adding , removing ,editing and interactive clearing form list dynamically**
-=======
-- **Adding and removing form list dynamically**
->>>>>>> main
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
