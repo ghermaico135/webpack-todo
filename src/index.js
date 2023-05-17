@@ -8,10 +8,12 @@ import {
 
 const addBtn = document.querySelector('#addBtn');
 
+// Display
 window.addEventListener('load', () => {
   displayTask(store.tasks);
 });
 
+// add
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -24,6 +26,7 @@ addBtn.addEventListener('click', (e) => {
   }
 });
 
+// remove
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('trashBtn')) {
     const removeTask = (index) => {
@@ -35,6 +38,23 @@ document.addEventListener('click', (e) => {
 
     removeTask(e.target.id);
     displayTask(store.tasks);
+  }
+});
+
+// edit
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('description')) {
+    e.target.addEventListener('change', () => {
+      const newTasks = [];
+      store.tasks.forEach((task) => {
+        if (Number(e.target.id) === Number(task.index)) {
+          task.description = e.target.value;
+        }
+        newTasks.push(task);
+      });
+      localStorage.setItem('tasks', JSON.stringify(newTasks));
+      displayTask(newTasks);
+    });
   }
 });
 

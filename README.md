@@ -119,7 +119,7 @@ You can deploy this project using [Netlify](https://www.netlify.com/) or [Github
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page] (https://github.com/ghermaico135/webpack-todo/issue).
+Feel free to check the [issues page] (https://github.com/ghermaico135/webpack-todo/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
