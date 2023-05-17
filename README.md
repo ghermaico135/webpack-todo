@@ -7,8 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [💻 Getting Started ](#-getting-started-)
+  - [� Getting Started ](#-getting-started-)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
@@ -48,12 +47,6 @@
 -
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link] ()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,13 +104,11 @@ You can deploy this project using [Netlify](https://www.netlify.com/) or [Github
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- **Adding and removing form list dynamically**
+- **Adding , removing ,editing and interactive clearing form list dynamically**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +118,7 @@ You can deploy this project using [Netlify](https://www.netlify.com/) or [Github
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page] (https://github.com/ghermaico135/webpack-todo/issue).
+Feel free to check the [issues page] (https://github.com/ghermaico135/webpack-todo/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
