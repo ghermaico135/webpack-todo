@@ -38,20 +38,20 @@ document.addEventListener("click", (e) => {
 });
 
 // Edit
-document.addEventListener("change", () => {
-	const paragraph = document.querySelectorAll(".description");
-	paragraph.forEach((p) => {
-		p.addEventListener("keyup", (e) => {
-			store.tasks.forEach(() => {
-				const newValue = e.target.input.value;
-				console.log(input.value);
-				store.tasks.description = newValue;
-				localStorage.setItem("tasks", JSON.stringify(store.tasks));
-				// localStorage.setItem("todoTask", JSON.stringify(todoTask));
-			});
-		});
-	});
-});
+// document.addEventListener("change", () => {
+// 	const paragraph = document.querySelectorAll(".description");
+// 	paragraph.forEach((p) => {
+// 		p.addEventListener("keyup", (e) => {
+// 			store.tasks.forEach(() => {
+// 				const newValue = e.target.input.value;
+// 				console.log(input.value);
+// 				store.tasks.description = newValue;
+// 				localStorage.setItem("tasks", JSON.stringify(store.tasks));
+// 				// localStorage.setItem("todoTask", JSON.stringify(todoTask));
+// 			});
+// 		});
+// 	});
+// });
 
 //checklist
 document.addEventListener("click", (e) => {
