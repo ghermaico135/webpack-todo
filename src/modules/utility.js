@@ -1,8 +1,5 @@
 /** @format */
 
-// import Storage from './storage.js';
-// import { store } from '../index.js';
-
 const todoListContainer = document.querySelector('#todo-list-container');
 const input = document.querySelector('#textInput');
 

@@ -7,6 +7,7 @@ import {
 } from './modules/utility.js';
 
 const addBtn = document.querySelector('#addBtn');
+const clearBtn = document.querySelector('#clearBtn');
 
 // Display
 window.addEventListener('load', () => {
@@ -56,6 +57,32 @@ document.addEventListener('click', (e) => {
       displayTask(newTasks);
     });
   }
+});
+
+// checklist
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('checkBtn')) {
+    store.tasks.forEach((task) => {
+      if (task.index === +e.target.id) {
+        if (e.target.checked) {
+          task.completed = true;
+        } else {
+          task.completed = false;
+        }
+      }
+    });
+
+    localStorage.setItem('tasks', JSON.stringify(store.tasks));
+
+    displayTask(store.tasks);
+  }
+});
+
+// clearALL
+clearBtn.addEventListener('click', () => {
+  store.tasks = store.tasks.filter((task) => task.completed !== true);
+  localStorage.setItem('tasks', JSON.stringify(store.tasks));
+  displayTask(store.tasks);
 });
 
 export default store;

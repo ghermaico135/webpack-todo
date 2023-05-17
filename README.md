@@ -48,7 +48,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -105,11 +104,11 @@ You can deploy this project using [Netlify](https://www.netlify.com/) or [Github
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Adding and removing form list dynamically**
+- **Adding , removing ,editing and interactive clearing form list dynamically**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
