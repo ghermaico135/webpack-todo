@@ -9,10 +9,12 @@ import {
 const addBtn = document.querySelector('#addBtn');
 const clearBtn = document.querySelector('#clearBtn');
 
+// Display
 window.addEventListener('load', () => {
   displayTask(store.tasks);
 });
 
+// add
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -25,6 +27,7 @@ addBtn.addEventListener('click', (e) => {
   }
 });
 
+// remove
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('trashBtn')) {
     const removeTask = (index) => {
@@ -56,6 +59,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
+<<<<<<< HEAD
 // checklist
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('checkBtn')) {
@@ -82,4 +86,6 @@ clearBtn.addEventListener('click', () => {
   displayTask(store.tasks);
 });
 
+=======
+>>>>>>> main
 export default store;
