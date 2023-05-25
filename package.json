@@ -15,6 +15,7 @@
     "deploy": "gh-pages -d dist"
   },
   "jest": {
+    
     "testEnvironment": "jsdom",
     "setupFiles": ["jest-localstorage-mock"]
   },
