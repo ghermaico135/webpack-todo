@@ -3,7 +3,14 @@
 import './style.css';
 import store from './modules/storage.js';
 import {
-  addTask, displayTask, clearField, input,
+  addTask,
+  displayTask,
+  clearField,
+  input,
+  removeTask,
+  edit,
+  checklist,
+  clearAll,
 } from './modules/utility.js';
 
 const addBtn = document.querySelector('#addBtn');
@@ -19,7 +26,7 @@ addBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
   if (input.value === '') {
-    // console.log("All Fields are required");
+    // console.log("error")
   } else {
     addTask(store.tasks);
     displayTask(store.tasks);
@@ -30,13 +37,6 @@ addBtn.addEventListener('click', (e) => {
 // remove
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('trashBtn')) {
-    const removeTask = (index) => {
-      store.tasks = store.tasks.filter(
-        (task) => Number(task.index) !== Number(index),
-      );
-      localStorage.setItem('tasks', JSON.stringify(store.tasks));
-    };
-
     removeTask(e.target.id);
     displayTask(store.tasks);
   }
@@ -46,15 +46,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('description')) {
     e.target.addEventListener('change', () => {
-      const newTasks = [];
-      store.tasks.forEach((task) => {
-        if (Number(e.target.id) === Number(task.index)) {
-          task.description = e.target.value;
-        }
-        newTasks.push(task);
-      });
-      localStorage.setItem('tasks', JSON.stringify(newTasks));
-      displayTask(newTasks);
+      edit(e);
     });
   }
 });
@@ -62,27 +54,13 @@ document.addEventListener('click', (e) => {
 // checklist
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('checkBtn')) {
-    store.tasks.forEach((task) => {
-      if (task.index === +e.target.id) {
-        if (e.target.checked) {
-          task.completed = true;
-        } else {
-          task.completed = false;
-        }
-      }
-    });
-
-    localStorage.setItem('tasks', JSON.stringify(store.tasks));
-
-    displayTask(store.tasks);
+    checklist(e);
   }
 });
 
 // clearALL
 clearBtn.addEventListener('click', () => {
-  store.tasks = store.tasks.filter((task) => task.completed !== true);
-  localStorage.setItem('tasks', JSON.stringify(store.tasks));
-  displayTask(store.tasks);
+  clearAll();
 });
 
 export default store;
