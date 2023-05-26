@@ -48,11 +48,6 @@ tasks.push(
     description: 'javascript',
     completed: true,
   },
-  {
-    index: tasks.length + 1,
-    description: 'html',
-    completed: false
-  },
 );
 
 const edit = (id, newInput) => {
