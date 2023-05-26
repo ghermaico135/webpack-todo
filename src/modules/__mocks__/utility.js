@@ -35,42 +35,92 @@ const removeTask = (index) => {
 };
 
 // edit.test;
-const edit = (e) => {
-  const tasks = getItem();
+const tasks = [];
+
+tasks.push(
+  {
+    index: tasks.length + 1,
+    description: 'miki',
+    completed: false,
+  },
+  {
+    index: tasks.length + 1,
+    description: 'javascript',
+    completed: true,
+  },
+);
+
+const edit = (id, newInput) => {
+  const tasks = [
+    {
+      index: 1,
+      description: 'cat',
+      completed: false,
+    },
+  ];
+  let result = '';
   const newTasks = [];
   tasks.forEach((task) => {
-    if (Number(e.target.id) === Number(task.index)) {
-      task.description = e.target.value;
+    if (id === task.index) {
+      task.description = newInput;
+      result = task.description;
     }
     newTasks.push(task);
   });
-  setItems(tasks);
-  // displayTask(newTasks);
+
+  return result;
 };
 
 // checklist
-const checklist = (e) => {
-  const tasks = getItem();
+const checklist = (id, isChecked) => {
+  const tasks = [
+    {
+      index: 1,
+      description: 'cat',
+      completed: true,
+    },
+    {
+      index: 2,
+      description: 'dog',
+      completed: false,
+    },
+  ];
+
+  const status = isChecked;
+
+  let result = '';
   tasks.forEach((task) => {
-    if (task.index === +e.target.id) {
-      if (e.target.checked) {
+    if (task.index === id) {
+      if (status === 'checked') {
         task.completed = true;
+        result = true;
       } else {
         task.completed = false;
+        result = task.completed;
       }
     }
   });
 
   setItems(tasks);
-
-  // displayTask(store.tasks);
+  return result;
 };
 
 const clearAll = () => {
-  let tasks = getItem();
+  let tasks = [
+    {
+      index: 1,
+      description: 'cat',
+      completed: true,
+    },
+    {
+      index: 2,
+      description: 'dog',
+      completed: false,
+    },
+  ];
+
   tasks = tasks.filter((task) => task.completed !== true);
-  setItems(tasks);
-  // displayTask(store.tasks);
+  return tasks;
 };
 
 exports.addTask = addTask;
